@@ -7,7 +7,6 @@ strr = ""
 a = random.sample(rg, 3)
 for i in a:
     strr = strr + str(i)
-print(strr)
 while gameover:
     user = input()
     s, b = 0, 0
@@ -28,6 +27,10 @@ while gameover:
         b -= 1
     if s == 0 and b == 0:
         print("OUT")
+    elif s == 0 and b > 0:
+        print(f"{b}B")
+    elif s > 0 and b == 0:
+        print(f"{s}S")
     else:
         print(f"{b}B {s}S")
     if s == 3:
